@@ -4,235 +4,234 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Excelora Consultants</title>
-  <meta name="description" content="Excelora Consultants — practical business consulting for growth, turnaround, and operational improvement. Cost-effective, fast, and hands-on." />
+  <meta name="description" content="Excelora Consultants — practical business consulting for growth, turnaround, and operational improvement. Cost-effective, fast, and hands-on for New Zealand businesses." />
   <link rel="icon" href="/logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { brand: { 900: "#0B3A6E", 800: "#12497F" } }
+          colors: {
+            brand: { 900: "#0A3767", 800: "#144571", 700: "#1C5682" }
+          }
         }
       }
     };
-    function scrollToId(id){ const el=document.getElementById(id); if(el) el.scrollIntoView({behavior:"smooth", block:"start"}); }
+    function scrollToId(id) {
+      const el=document.getElementById(id);
+      if(el) el.scrollIntoView({behavior:"smooth"});
+    }
   </script>
-  <style>.hero-overlay{background:linear-gradient(180deg,rgba(255,255,255,.82)0%,rgba(255,255,255,.82)45%,rgba(255,255,255,.94)100%)}</style>
+  <style>
+    .hero-overlay {
+      background: linear-gradient(180deg,
+        rgba(255,255,255,0.88) 0%,
+        rgba(255,255,255,0.94) 60%,
+        rgba(255,255,255,1) 100%);
+    }
+  </style>
 </head>
 
-<body class="min-h-screen text-slate-900 bg-white">
-<header class="sticky top-0 z-50 backdrop-blur bg-white/80 border-b border-slate-200">
-  <div class="mx-auto max-w-7xl px-4">
-    <div class="flex h-16 items-center justify-between">
-      <a href="#home" onclick="event.preventDefault();scrollToId('home')" class="flex items-center gap-3">
-        <img src="/logo.png" alt="Excelora logo" class="h-9 w-9 rounded-xl object-contain bg-white ring-1 ring-slate-200"
-             onerror="this.outerHTML='<span class=&quot;h-9 w-9 rounded-xl grid place-items-center bg-brand-900 text-white font-bold&quot;>Ex</span>'" />
-        <div class="leading-tight">
-          <div class="font-semibold">Excelora Consultants</div>
-          <div class="text-xs text-slate-500">Build. Optimise. Grow.</div>
-        </div>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <button onclick="scrollToId('home')" class="hover:text-slate-700">Home</button>
-        <button onclick="scrollToId('services')" class="hover:text-slate-700">Services</button>
-        <button onclick="scrollToId('about')" class="hover:text-slate-700">About</button>
-        <button onclick="scrollToId('process')" class="hover:text-slate-700">Process</button>
-        <button onclick="scrollToId('contact')" class="rounded-xl bg-brand-900 text-white px-4 py-2 hover:bg-brand-800">Get a Quote</button>
-      </nav>
-      <button class="md:hidden p-2 rounded-lg border border-slate-200" onclick="document.getElementById('mnav').classList.toggle('hidden')">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
+<body class="text-slate-900 bg-white">
+
+<!-- NAV -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
+    <div class="flex items-center gap-3">
+      <img src="/logo.png" alt="Excelora logo" class="h-9 w-9 rounded ring-1 ring-slate-200 bg-white object-contain"
+        onerror="this.outerHTML='<span class=&quot;h-9 w-9 grid place-items-center rounded bg-brand-900 text-white font-bold&quot;>Ex</span>'"/>
+      <span class="font-semibold text-sm">Excelora Consultants</span>
     </div>
-    <div id="mnav" class="md:hidden pb-4 hidden">
-      <div class="flex flex-col gap-2">
-        <button onclick="scrollToId('home')" class="text-left px-2 py-2 rounded-lg hover:bg-slate-100">Home</button>
-        <button onclick="scrollToId('services')" class="text-left px-2 py-2 rounded-lg hover:bg-slate-100">Services</button>
-        <button onclick="scrollToId('about')" class="text-left px-2 py-2 rounded-lg hover:bg-slate-100">About</button>
-        <button onclick="scrollToId('process')" class="text-left px-2 py-2 rounded-lg hover:bg-slate-100">Process</button>
-        <button onclick="scrollToId('contact')" class="mt-2 px-3 py-2 rounded-xl bg-brand-900 text-white">Get a Quote</button>
-      </div>
-    </div>
+    <nav class="hidden md:flex gap-6 text-sm">
+      <button onclick="scrollToId('home')" class="hover:opacity-70">Home</button>
+      <button onclick="scrollToId('services')" class="hover:opacity-70">Services</button>
+      <button onclick="scrollToId('about')" class="hover:opacity-70">About</button>
+      <button onclick="scrollToId('process')" class="hover:opacity-70">Process</button>
+      <button onclick="scrollToId('contact')" class="rounded-lg bg-brand-900 text-white px-4 py-2 hover:bg-brand-800">Enquire</button>
+    </nav>
   </div>
 </header>
 
+
+
+<!-- HERO -->
 <section id="home" class="relative overflow-hidden">
-  <div class="absolute inset-0 -z-10 bg-gradient-to-br from-brand-900 via-brand-800 to-slate-900"></div>
+  <div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand-900 via-brand-800 to-white"></div>
   <div class="absolute inset-0 hero-overlay"></div>
-  <div class="mx-auto max-w-7xl px-4 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 px-4 py-20">
     <div>
-      <h1 class="text-4xl md:text-6xl font-extrabold">Practical consulting for real growth</h1>
-      <p class="mt-5 text-lg text-slate-700">
-        Trusted Kiwi business solving problems for Kiwi businesses.
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight text-brand-900">
+        Practical consulting<br>for New Zealand businesses
+      </h1>
+      <p class="mt-5 text-lg">
+        Hands-on help to improve performance, solve operational challenges, and unlock stability and growth.
       </p>
 
-      <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
-        <div class="rounded-2xl bg-white/85 border p-4">
-          <div class="text-sm font-semibold">Cost-effective</div>
-          <div class="text-xs text-slate-600 mt-1">Clear scope & fair pricing.</div>
+      <!-- Restored Value Boxes ✅ -->
+      <div class="mt-8 grid sm:grid-cols-3 gap-3">
+        <div class="rounded-2xl bg-white/90 border p-4">
+          <strong class="text-sm">Turnaround & recovery</strong>
+          <p class="text-xs mt-1 text-slate-600">Stabilise cashflow. Improve outcomes quickly.</p>
         </div>
-        <div class="rounded-2xl bg-white/85 border p-4">
-          <div class="text-sm font-semibold">Quick turnaround</div>
-          <div class="text-xs text-slate-600 mt-1">Fast action when urgency matters.</div>
+        <div class="rounded-2xl bg-white/90 border p-4">
+          <strong class="text-sm">Clear business advice</strong>
+          <p class="text-xs mt-1 text-slate-600">We do <strong>not</strong> provide financial advice.</p>
         </div>
-        <div class="rounded-2xl bg-white/85 border p-4">
-          <div class="text-sm font-semibold">Support for struggling businesses</div>
-          <div class="text-xs text-slate-600 mt-1">Stability before scale.</div>
+        <div class="rounded-2xl bg-white/90 border p-4">
+          <strong class="text-sm">Fast & cost-effective</strong>
+          <p class="text-xs mt-1 text-slate-600">Action-focused, efficient delivery.</p>
         </div>
       </div>
 
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href="#contact" onclick="event.preventDefault();scrollToId('contact')" class="rounded-xl bg-brand-900 text-white px-5 py-3 hover:bg-brand-800">Book a free consult</a>
-        <a href="#services" onclick="event.preventDefault();scrollToId('services')" class="rounded-xl border px-5 py-3 hover:bg-slate-100">Explore services</a>
+      <div class="flex flex-wrap gap-3 mt-8">
+        <button onclick="scrollToId('contact')" class="rounded-lg bg-brand-900 text-white px-5 py-3 hover:bg-brand-800">Book a free consult</button>
+        <button onclick="scrollToId('services')" class="rounded-lg border px-5 py-3 hover:bg-slate-100">Explore services</button>
       </div>
     </div>
 
-    <div class="relative rounded-3xl overflow-hidden border shadow-2xl">
-      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2000&auto=format&fit=crop"
-           alt="Small business team" class="w-full h-full object-cover" />
+    <div class="rounded-3xl overflow-hidden border shadow-lg">
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2000" class="w-full h-full object-cover" alt="">
     </div>
   </div>
 </section>
 
-<section id="services" class="bg-gradient-to-b from-white to-slate-50">
-  <div class="mx-auto max-w-7xl px-4 py-16">
-    <h2 class="text-3xl md:text-4xl font-bold text-center">What we do</h2>
-    <p class="mt-2 text-slate-600 text-center max-w-2xl mx-auto">
-      Hands-on help that’s built for execution.
-    </p>
 
-    <div class="mt-10 grid md:grid-cols-3 gap-6">
-      <article class="rounded-3xl border bg-white shadow-sm overflow-hidden">
+
+<!-- SERVICES -->
+<section id="services" class="bg-gradient-to-b from-white to-slate-50">
+  <div class="max-w-7xl mx-auto px-4 py-20">
+    <h2 class="text-3xl md:text-4xl font-bold text-center">What we do</h2>
+    <p class="text-slate-600 text-center mt-2 max-w-2xl mx-auto">Straightforward consulting built around execution and outcomes.</p>
+
+    <div class="grid md:grid-cols-3 gap-8 mt-12">
+      <div class="rounded-3xl bg-white border shadow-sm overflow-hidden">
         <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600" class="h-40 w-full object-cover">
         <div class="p-6">
-          <div class="text-lg font-semibold">Strategy & Planning</div>
-          <p class="mt-2 text-sm text-slate-600">Clarity on where to play and how to win.</p>
-          <ul class="mt-4 space-y-2 text-sm">
-            <li>Go-to-market</li><li>Competitive positioning</li><li>Objectives & metrics</li>
-          </ul>
+          <h3 class="font-semibold text-lg">Strategy & Planning</h3>
+          <p class="text-sm mt-2 text-slate-600">Clarity on where to play and how to win.</p>
         </div>
-      </article>
-
-      <article class="rounded-3xl border bg-white shadow-sm overflow-hidden">
+      </div>
+      <div class="rounded-3xl bg-white border shadow-sm overflow-hidden">
         <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1600" class="h-40 w-full object-cover">
         <div class="p-6">
-          <div class="text-lg font-semibold">Operations & Process</div>
-          <p class="mt-2 text-sm text-slate-600">Unlock capacity & reduce waste.</p>
-          <ul class="mt-4 space-y-2 text-sm">
-            <li>Workflow improvement</li><li>Inventory & fulfilment</li><li>Cost efficiency</li>
-          </ul>
+          <h3 class="font-semibold text-lg">Operations & Process</h3>
+          <p class="text-sm mt-2 text-slate-600">Unlock efficiency, reduce friction.</p>
         </div>
-      </article>
-
-      <article class="rounded-3xl border bg-white shadow-sm overflow-hidden">
+      </div>
+      <div class="rounded-3xl bg-white border shadow-sm overflow-hidden">
         <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600" class="h-40 w-full object-cover">
         <div class="p-6">
-          <div class="text-lg font-semibold">Business & Economic Forecasting</div>
-          <p class="mt-2 text-sm text-slate-600">Review financial and market indicators to support business planning.</p>
-          <ul class="mt-4 space-y-2 text-sm">
-            <li>Cashflow & scenario reviews</li>
-            <li>Pricing guidance</li>
-            <li>Performance insights</li>
-          </ul>
+          <h3 class="font-semibold text-lg">Business & Economic Forecasting</h3>
+          <p class="text-sm mt-2 text-slate-600">Review performance indicators and plan ahead with confidence.</p>
         </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>
 
+
+
+<!-- ABOUT -->
 <section id="about" class="bg-white">
-  <div class="mx-auto max-w-7xl px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
+  <div class="max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-center">
     <div>
       <h2 class="text-3xl md:text-4xl font-bold">Why Excelora?</h2>
-      <p class="mt-3 text-slate-600">
-        We focus on **practical execution**, not pages of slides — clear steps, measurable results, and capability that stays with your team.
+      <p class="mt-3 text-slate-600 leading-relaxed">
+        We’re a practical consultancy focused on **simple, fast execution** and **director-level insight**. No fluff — just clear decisions and real improvement.
       </p>
-
-      <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
-        <div class="rounded-2xl border p-4"><dt class="font-semibold">Director-level insight</dt><dd class="text-slate-600 mt-1">Experienced leaders, not juniors.</dd></div>
-        <div class="rounded-2xl border p-4"><dt class="font-semibold">Clear pricing</dt><dd class="text-slate-600 mt-1">Defined scope & budgets.</dd></div>
-        <div class="rounded-2xl border p-4"><dt class="font-semibold">Insight-led problem solving</dt><dd class="text-slate-600 mt-1">Understand first. Fix fast.</dd></div>
-        <div class="rounded-2xl border p-4"><dt class="font-semibold">NZ & AU focus</dt><dd class="text-slate-600 mt-1">Local business knowledge.</dd></div>
-      </dl>
     </div>
 
     <div class="rounded-3xl overflow-hidden border shadow-sm">
-      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2000" class="w-full h-full object-cover" />
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2000" class="w-full h-full object-cover">
     </div>
   </div>
 </section>
 
+
+
+<!-- PROCESS -->
 <section id="process" class="bg-slate-50">
-  <div class="mx-auto max-w-7xl px-4 py-16">
+  <div class="max-w-7xl mx-auto px-4 py-20">
     <h2 class="text-3xl md:text-4xl font-bold text-center">How we work</h2>
-    <div class="mt-8 grid md:grid-cols-3 gap-6">
-      <div class="rounded-3xl border bg-white p-6">
-        <div class="h-9 w-9 rounded-xl bg-brand-900 text-white grid place-items-center font-bold">1</div>
-        <div class="mt-3 font-semibold">Discovery</div>
-        <p class="text-sm text-slate-600 mt-1">Identify priorities & constraints.</p>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-12">
+      <div class="rounded-3xl border bg-white p-6 text-center">
+        <div class="bg-brand-900 text-white w-9 h-9 rounded-full grid place-items-center font-bold mx-auto">1</div>
+        <strong class="block mt-3">Discovery</strong>
+        <p class="text-sm mt-2 text-slate-600">Understand priorities clearly.</p>
       </div>
-      <div class="rounded-3xl border bg-white p-6">
-        <div class="h-9 w-9 rounded-xl bg-brand-900 text-white grid place-items-center font-bold">2</div>
-        <div class="mt-3 font-semibold">Plan</div>
-        <p class="text-sm text-slate-600 mt-1">Define actions & ownership.</p>
+      <div class="rounded-3xl border bg-white p-6 text-center">
+        <div class="bg-brand-900 text-white w-9 h-9 rounded-full grid place-items-center font-bold mx-auto">2</div>
+        <strong class="block mt-3">Plan</strong>
+        <p class="text-sm mt-2 text-slate-600">Define actions & ownership.</p>
       </div>
-      <div class="rounded-3xl border bg-white p-6">
-        <div class="h-9 w-9 rounded-xl bg-brand-900 text-white grid place-items-center font-bold">3</div>
-        <div class="mt-3 font-semibold">Execute</div>
-        <p class="text-sm text-slate-600 mt-1">Implement with speed & clarity.</p>
+      <div class="rounded-3xl border bg-white p-6 text-center">
+        <div class="bg-brand-900 text-white w-9 h-9 rounded-full grid place-items-center font-bold mx-auto">3</div>
+        <strong class="block mt-3">Execute</strong>
+        <p class="text-sm mt-2 text-slate-600">Implement with speed & clarity.</p>
       </div>
     </div>
   </div>
 </section>
 
+
+
+<!-- CALENDLY -->
 <section class="bg-white">
-  <div class="mx-auto max-w-7xl px-4 py-16">
+  <div class="max-w-7xl mx-auto px-4 py-20">
     <h2 class="text-3xl md:text-4xl font-bold text-center">Book a 30-minute intro</h2>
-    <p class="text-slate-600 text-center mt-2">Pick a time that works — no delays.</p>
+    <p class="text-center mt-2 text-slate-600">Choose a time that suits you.</p>
 
-    <div class="mt-8 rounded-3xl border overflow-hidden">
-      <div class="calendly-inline-widget" data-url="https://calendly.com/josh-sharp-excelora/30min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:720px;"></div>
+    <div class="rounded-3xl border mt-10 overflow-hidden">
+      <div class="calendly-inline-widget"
+        data-url="https://calendly.com/josh-sharp-excelora/30min?hide_gdpr_banner=1"
+        style="min-width:320px;height:720px;"></div>
     </div>
-
     <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   </div>
 </section>
 
+
+
+<!-- CONTACT -->
 <section id="contact" class="bg-slate-50">
-  <div class="mx-auto max-w-7xl px-4 py-16 grid md:grid-cols-2 gap-10">
+  <div class="max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10">
     <div>
       <h2 class="text-3xl md:text-4xl font-bold">Let’s talk</h2>
-      <p class="mt-2 text-slate-600">We’ll respond within one business day.</p>
+      <p class="mt-3 text-slate-600">We’ll respond within one business day.</p>
 
       <div class="mt-6 rounded-3xl border bg-white p-6">
-        <form onsubmit="event.preventDefault();(function(f){const fd=new FormData(f);const name=fd.get('name');const email=fd.get('email');const phone=fd.get('phone');const msg=fd.get('message');window.location.href=`mailto:will.belch@excelora.net?subject=${encodeURIComponent('New enquiry — '+name)}&body=${encodeURIComponent('Name: '+name+'\nEmail: '+email+'\nPhone: '+phone+'\n\nProject: '+msg)}`;f.reset();})(this)" class="space-y-4">
-          <div><label class="text-sm">Name</label><input name="name" required class="mt-1 w-full rounded-xl border px-3 py-2" /></div>
-          <div><label class="text-sm">Email</label><input type="email" name="email" required class="mt-1 w-full rounded-xl border px-3 py-2" /></div>
-          <div><label class="text-sm">Phone</label><input name="phone" class="mt-1 w-full rounded-xl border px-3 py-2" /></div>
-          <div><label class="text-sm">What do you need help with?</label><textarea name="message" rows="4" class="mt-1 w-full rounded-xl border px-3 py-2"></textarea></div>
-          <button type="submit" class="rounded-xl bg-brand-900 text-white px-5 py-3 hover:bg-brand-800">Send enquiry</button>
+        <form onsubmit="event.preventDefault();(function(f){const d=new FormData(f);window.location.href=`mailto:will.belch@excelora.net?subject=${encodeURIComponent('New enquiry — '+d.get('name'))}&body=${encodeURIComponent('Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nPhone: '+d.get('phone')+'\n\nEnquiry: '+d.get('message'))}`;f.reset();})(this)" class="space-y-4">
+          <input class="w-full rounded-lg border px-3 py-2" name="name" placeholder="Name" required />
+          <input class="w-full rounded-lg border px-3 py-2" name="email" type="email" placeholder="Email" required />
+          <input class="w-full rounded-lg border px-3 py-2" name="phone" placeholder="Phone" />
+          <textarea class="w-full rounded-lg border px-3 py-2" name="message" rows="4" placeholder="What do you need help with?"></textarea>
+          <button type="submit" class="rounded-lg bg-brand-900 text-white px-4 py-3 hover:bg-brand-800 w-full">Send enquiry</button>
         </form>
       </div>
     </div>
 
     <div class="rounded-3xl border bg-white p-6">
-      <h3 class="font-semibold">Contact</h3>
-      <ul class="mt-3 text-sm text-slate-700 space-y-2">
-        <li>✉️ <a class="underline" href="mailto:will.belch@excelora.net">will.belch@excelora.net</a></li>
-        <li>📍 Auckland, New Zealand</li>
-        <li>🕑 Mon–Fri, 9am–5pm NZT</li>
+      <strong>Contact</strong>
+      <ul class="text-sm mt-3 space-y-1 text-slate-700">
+        <li><a href="mailto:will.belch@excelora.net" class="underline">will.belch@excelora.net</a></li>
+        <li>Auckland, New Zealand</li>
+        <li>Mon–Fri, 9am–5pm NZT</li>
       </ul>
     </div>
   </div>
 </section>
 
-<footer class="border-t bg-white">
-  <div class="mx-auto max-w-7xl px-4 py-8 text-center text-xs text-slate-500">
-    <strong>Important:</strong> Excelora Consultants provides <strong>business advice only</strong>. We do not provide financial advice. Information on this website is general in nature.
-    <br><br>
-    © <span id="y"></span> Excelora Consultants. All rights reserved.
-  </div>
+
+
+<!-- FOOTER -->
+<footer class="border-t bg-white text-center text-xs text-slate-500 py-8 px-4">
+  <strong>Important:</strong> Excelora Consultants provides <strong>business advice only</strong>. We do not provide financial advice.
+  <br><br>© <span id="year"></span> Excelora Consultants. All rights reserved.
 </footer>
 
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
 </body>
 </html>
