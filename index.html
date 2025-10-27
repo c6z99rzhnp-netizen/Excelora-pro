@@ -4,19 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Excelora Consultants</title>
-  <meta name="description" content="Excelora Consultants — Strategy, Operations, Finance. Practical consulting for real growth." />
+  <meta name="description" content="Excelora Consultants — practical business consulting for growth, turnaround, and operations. Cost-effective, fast, and hands-on." />
   <link rel="icon" href="/logo.png" />
   <!-- Tailwind CSS via CDN (no build tools) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // ===== BASIC SETTINGS =====
-    const BRAND = {
-      name: "Excelora Consultants",
-      email: "will.belch@excelora.net",
-      calendly: "https://calendly.com/josh-sharp-excelora/30min"
-    };
-
-    // Tailwind brand colour tweak (deep blue)
+    // Brand palette (deep blue)
     tailwind.config = {
       theme: {
         extend: {
@@ -24,12 +17,9 @@
         }
       }
     };
-
-    // Smooth scroll helper
     function scrollToId(id){ const el=document.getElementById(id); if(el) el.scrollIntoView({behavior:"smooth", block:"start"}); }
   </script>
   <style>
-    /* Light overlay so text reads on the hero (works even without a banner image) */
     .hero-overlay { background: linear-gradient(180deg, rgba(255,255,255,.82) 0%, rgba(255,255,255,.82) 45%, rgba(255,255,255,.94) 100%); }
   </style>
 </head>
@@ -40,7 +30,7 @@
     <div class="mx-auto max-w-7xl px-4">
       <div class="flex h-16 items-center justify-between">
         <a href="#home" onclick="event.preventDefault();scrollToId('home')" class="flex items-center gap-3">
-          <!-- If /logo.png missing, fall back to a clean badge -->
+          <!-- Fallback badge if /logo.png is missing -->
           <img src="/logo.png" alt="Excelora logo" class="h-9 w-9 rounded-xl object-contain bg-white ring-1 ring-slate-200"
                onerror="this.outerHTML='<span class=&quot;h-9 w-9 rounded-xl grid place-items-center bg-brand-900 text-white font-bold&quot;>Ex</span>'" />
           <div class="leading-tight">
@@ -56,9 +46,7 @@
           <button onclick="scrollToId('contact')" class="rounded-xl bg-brand-900 text-white px-4 py-2 hover:bg-brand-800">Get a Quote</button>
         </nav>
         <button class="md:hidden p-2 rounded-lg border border-slate-200" onclick="document.getElementById('mnav').classList.toggle('hidden')" aria-label="Toggle menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-          </svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
       </div>
       <div id="mnav" class="md:hidden pb-4 hidden">
@@ -73,9 +61,10 @@
     </div>
   </header>
 
-  <!-- HERO (uses gradient by default; you can add /bg-hero.jpg later) -->
+  <!-- HERO -->
   <section id="home" class="relative overflow-hidden">
     <div class="absolute inset-0 -z-10">
+      <!-- Gradient by default. If you later add /bg-hero.jpg, you can swap the div for an <img>. -->
       <div class="h-full w-full bg-gradient-to-br from-brand-900 via-brand-800 to-slate-900"></div>
       <div class="absolute inset-0 hero-overlay"></div>
     </div>
@@ -87,6 +76,20 @@
         <p class="mt-5 text-lg text-slate-700 leading-relaxed">
           Trusted Kiwi business solving problems for Kiwi businesses.
         </p>
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div class="rounded-2xl bg-white/85 backdrop-blur border border-slate-200 p-4">
+            <div class="text-sm font-semibold">Cost-effective</div>
+            <div class="text-xs text-slate-600 mt-1">Fixed-fee options. No surprises.</div>
+          </div>
+          <div class="rounded-2xl bg-white/85 backdrop-blur border border-slate-200 p-4">
+            <div class="text-sm font-semibold">Quick turnaround</div>
+            <div class="text-xs text-slate-600 mt-1">Audits in days, not months.</div>
+          </div>
+          <div class="rounded-2xl bg-white/85 backdrop-blur border border-slate-200 p-4">
+            <div class="text-sm font-semibold">For struggling businesses</div>
+            <div class="text-xs text-slate-600 mt-1">Cashflow & ops triage, fast.</div>
+          </div>
+        </div>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="#contact" onclick="event.preventDefault();scrollToId('contact')" class="inline-flex items-center rounded-xl bg-brand-900 text-white px-5 py-3 hover:bg-brand-800">Book a free consult</a>
           <a href="#services" onclick="event.preventDefault();scrollToId('services')" class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 hover:bg-slate-100">Explore services</a>
@@ -95,8 +98,27 @@
       </div>
       <div class="relative">
         <div class="rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
-          <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=2000&auto=format&fit=crop" alt="Analytics dashboard" class="w-full h-full object-cover" />
+          <!-- wholesome, human image (small team / family business vibe) -->
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2000&auto=format&fit=crop" alt="Friendly small business team" class="w-full h-full object-cover" />
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE STRIP -->
+  <section class="bg-white border-t border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 py-10 grid md:grid-cols-3 gap-6">
+      <div class="rounded-3xl border border-slate-200 p-6">
+        <div class="text-lg font-semibold">Turnaround & recovery</div>
+        <p class="text-sm text-slate-600 mt-2">Stuck? We stabilise cashflow, prioritise quick wins, and build a simple weekly scoreboard so everyone knows what to do next.</p>
+      </div>
+      <div class="rounded-3xl border border-slate-200 p-6">
+        <div class="text-lg font-semibold">Clear, business-first advice</div>
+        <p class="text-sm text-slate-600 mt-2">We provide <strong>business advice</strong> you can act on immediately. <em>We do not provide financial advice.</em></p>
+      </div>
+      <div class="rounded-3xl border border-slate-200 p-6">
+        <div class="text-lg font-semibold">Fast & cost-effective</div>
+        <p class="text-sm text-slate-600 mt-2">One-week audits. 10-day action plans. Fixed-fee options to keep costs predictable.</p>
       </div>
     </div>
   </section>
@@ -111,7 +133,7 @@
           <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop" alt="Strategy" class="h-40 w-full object-cover" />
           <div class="p-6">
             <div class="text-lg font-semibold">Strategy & Planning</div>
-            <p class="mt-2 text-sm text-slate-600">Market sizing, pricing, and practical roadmaps that teams actually use.</p>
+            <p class="mt-2 text-sm text-slate-600">Market sizing, pricing, practical roadmaps your team can execute.</p>
             <ul class="mt-4 space-y-2 text-sm">
               <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-900"></span> Go-to-market</li>
               <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-900"></span> Competitive analysis</li>
@@ -123,19 +145,19 @@
           <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1600&auto=format&fit=crop" alt="Operations" class="h-40 w-full object-cover" />
           <div class="p-6">
             <div class="text-lg font-semibold">Operations & Process</div>
-            <p class="mt-2 text-sm text-slate-600">Lean, KPI-driven ops: automate busywork and shorten cycle times.</p>
+            <p class="mt-2 text-sm text-slate-600">Lean, KPI-driven ops. Automate busywork and shorten cycle times.</p>
             <ul class="mt-4 space-y-2 text-sm">
               <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-900"></span> Workflow design</li>
-              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-900"></span> Inventory/fulfilment</li>
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-900"></span> Inventory & fulfilment</li>
               <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-900"></span> Cost reduction</li>
             </ul>
           </div>
         </article>
         <article class="rounded-3xl border border-slate-200 bg-white shadow-sm overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600&auto=format&fit=crop" alt="Finance" class="h-40 w-full object-cover" />
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600&auto=format&fit=crop" alt="Analytics" class="h-40 w-full object-cover" />
           <div class="p-6">
             <div class="text-lg font-semibold">Finance & Analytics</div>
-            <p class="mt-2 text-sm text-slate-600">Models that inform decisions: cash flow, unit economics, dashboards.</p>
+            <p class="mt-2 text-sm text-slate-600">Unit economics, cashflow models, and dashboards that guide decisions.</p>
             <ul class="mt-4 space-y-2 text-sm">
               <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-900"></span> Forecasting</li>
               <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-900"></span> Pricing models</li>
@@ -152,11 +174,11 @@
     <div class="mx-auto max-w-7xl px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
       <div>
         <h2 class="text-3xl md:text-4xl font-bold">Why Excelora?</h2>
-        <p class="mt-3 text-slate-600">We’re a hands-on consultancy focused on outcomes over slide decks. Expect candid advice, tight feedback loops, and work you can put into play this week—not next quarter.</p>
+        <p class="mt-3 text-slate-600">We’re a hands-on team focused on outcomes over slide decks. Expect candid advice, tight feedback loops, and work you can put into play this week — not next quarter.</p>
         <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
           <div class="rounded-2xl bg-white border border-slate-200 p-4"><dt class="font-semibold">Senior-only team</dt><dd class="text-slate-600 mt-1">Experts from day one.</dd></div>
-          <div class="rounded-2xl bg-white border border-slate-200 p-4"><dt class="font-semibold">Transparent pricing</dt><dd class="text-slate-600 mt-1">Clear scopes & fixed fees.</dd></div>
-          <div class="rounded-2xl bg-white border border-slate-200 p-4"><dt class="font-semibold">Playbooks included</dt><dd class="text-slate-600 mt-1">Docs & dashboards to keep.</dd></div>
+          <div class="rounded-2xl bg-white border border-slate-200 p-4"><dt class="font-semibold">Transparent pricing</dt><dd class="text-slate-600 mt-1">Fixed-fee options available.</dd></div>
+          <div class="rounded-2xl bg-white border border-slate-200 p-4"><dt class="font-semibold">Actionable playbooks</dt><dd class="text-slate-600 mt-1">Docs & dashboards to keep.</dd></div>
           <div class="rounded-2xl bg-white border border-slate-200 p-4"><dt class="font-semibold">NZ & AU focus</dt><dd class="text-slate-600 mt-1">Local knowledge; global standards.</dd></div>
         </dl>
         <div class="mt-6 flex gap-3">
@@ -188,20 +210,21 @@
         <div class="rounded-3xl border border-slate-200 bg-white p-6">
           <div class="h-9 w-9 rounded-xl bg-brand-900 text-white grid place-items-center font-bold">3</div>
           <div class="mt-3 font-semibold">Execute</div>
-          <p class="text-sm text-slate-600 mt-1">We build, ship, and iterate with your team.</p>
+          <p class="text-sm text-slate-600 mt-1">We ship, iterate, and transfer capability.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CALENDLY -->
+  <!-- CALENDLY (official inline embed) -->
   <section class="bg-white">
     <div class="mx-auto max-w-7xl px-4 py-16">
       <h2 class="text-3xl md:text-4xl font-bold text-center">Book a 30-minute intro</h2>
-      <p class="text-slate-600 text-center mt-2">Pick a time that works—no back-and-forth.</p>
+      <p class="text-slate-600 text-center mt-2">Pick a time that works — no back-and-forth.</p>
       <div class="mt-8 rounded-3xl border border-slate-200 bg-white overflow-hidden">
-        <iframe title="Calendly" src="https://calendly.com/josh-sharp-excelora/30min" class="w-full h-[720px]"></iframe>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/josh-sharp-excelora/30min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:720px;"></div>
       </div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     </div>
   </section>
 
@@ -210,10 +233,9 @@
     <div class="mx-auto max-w-7xl px-4 py-16 grid md:grid-cols-2 gap-10">
       <div>
         <h2 class="text-3xl md:text-4xl font-bold">Let’s talk</h2>
-        <p class="mt-2 text-slate-600">Tell us a bit about your business—We’ll reply within one business day.</p>
+        <p class="mt-2 text-slate-600">Tell us a bit about your business — we’ll reply within one business day.</p>
         <div class="mt-6 rounded-3xl border border-slate-200 bg-white p-6">
-          <!-- Simple mailto flow. We can switch to webhook/SMS later. -->
-          <form onsubmit="event.preventDefault();(function(f){const fd=new FormData(f);const name=fd.get('name')||'Unknown';const email=fd.get('email')||'';const phone=fd.get('phone')||'';const company=fd.get('company')||'';const msg=fd.get('message')||'';const subject=encodeURIComponent('New enquiry — '+name);const body=encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\n\nProject: ${msg}`);window.location.href=`mailto:${BRAND.email}?subject=${subject}&body=${body}`;f.reset();})(this)" class="space-y-4">
+          <form onsubmit="event.preventDefault();(function(f){const fd=new FormData(f);const name=fd.get('name')||'Unknown';const email=fd.get('email')||'';const phone=fd.get('phone')||'';const company=fd.get('company')||'';const msg=fd.get('message')||'';const subject=encodeURIComponent('New enquiry — '+name);const body=encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\n\nProject: ${msg}`);window.location.href=`mailto:will.belch@excelora.net?subject=${subject}&body=${body}`;f.reset();})(this)" class="space-y-4">
             <div><label class="text-sm">Name</label><input name="name" required class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-900/30" /></div>
             <div><label class="text-sm">Email</label><input type="email" name="email" required class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-900/30" /></div>
             <div><label class="text-sm">Phone</label><input name="phone" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-900/30" /></div>
@@ -234,7 +256,6 @@
           <li>🔗 <a class="underline" href="https://twitter.com" target="_blank" rel="noreferrer">X / Twitter</a></li>
         </ul>
         <div class="mt-6 h-48 rounded-2xl border border-slate-200 overflow-hidden">
-          <!-- You can add /bg-hero.jpg later; this fallback image keeps it tidy -->
           <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop" alt="Auckland skyline" class="w-full h-full object-cover" />
         </div>
       </div>
@@ -269,7 +290,7 @@
     </div>
     <div class="px-4">
       <p class="text-[11px] text-slate-500 max-w-7xl mx-auto">
-        <strong>Disclaimer:</strong> We do not and cannot provide financial advice. Any information on this website is general in nature and does not take into account your objectives, financial situation, or needs.
+        <strong>Important:</strong> We provide <strong>business advice</strong>. We do <strong>not</strong> provide financial advice. Information on this website is general in nature and does not take into account your objectives, financial situation, or needs.
       </p>
     </div>
     <div class="py-6 text-center text-xs text-slate-500">
