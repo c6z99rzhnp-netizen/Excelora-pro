@@ -21,6 +21,8 @@
   </script>
   <style>
     .hero-overlay { background: linear-gradient(180deg, rgba(255,255,255,.82) 0%, rgba(255,255,255,.82) 45%, rgba(255,255,255,.94) 100%); }
+    /* Keep iframe crisp and isolated */
+    iframe { -webkit-font-smoothing: antialiased; filter: none !important; transform: none !important; image-rendering: auto !important; }
   </style>
 </head>
 <body class="min-h-screen text-slate-900 bg-white">
@@ -64,7 +66,6 @@
   <!-- HERO -->
   <section id="home" class="relative overflow-hidden">
     <div class="absolute inset-0 -z-10">
-      <!-- Gradient by default. If you later add /bg-hero.jpg, you can swap the div for an <img>. -->
       <div class="h-full w-full bg-gradient-to-br from-brand-900 via-brand-800 to-slate-900"></div>
       <div class="absolute inset-0 hero-overlay"></div>
     </div>
@@ -93,12 +94,12 @@
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="#contact" onclick="event.preventDefault();scrollToId('contact')" class="inline-flex items-center rounded-xl bg-brand-900 text-white px-5 py-3 hover:bg-brand-800">Book a free consult</a>
           <a href="#services" onclick="event.preventDefault();scrollToId('services')" class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 hover:bg-slate-100">Explore services</a>
-          <a href="https://calendly.com/josh-sharp-excelora/30min" target="_blank" rel="noreferrer" class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 hover:bg-slate-100">Book via Calendly</a>
+          <!-- UPDATED BUTTON LINK -->
+          <a href="https://calendly.com/d/cwg2-4ss-n7c/one-off-meeting" target="_blank" rel="noreferrer" class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 hover:bg-slate-100">Book via Calendly</a>
         </div>
       </div>
       <div class="relative">
         <div class="rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
-          <!-- wholesome, human image (small team / family business vibe) -->
           <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2000&auto=format&fit=crop" alt="Friendly small business team" class="w-full h-full object-cover" />
         </div>
       </div>
@@ -182,7 +183,8 @@
           <div class="rounded-2xl bg-white border border-slate-200 p-4"><dt class="font-semibold">NZ & AU focus</dt><dd class="text-slate-600 mt-1">Local knowledge; global standards.</dd></div>
         </dl>
         <div class="mt-6 flex gap-3">
-          <a href="https://calendly.com/josh-sharp-excelora/30min" target="_blank" rel="noreferrer" class="rounded-xl bg-brand-900 text-white px-5 py-3 hover:bg-brand-800">Book a call</a>
+          <!-- UPDATED BUTTON LINK -->
+          <a href="https://calendly.com/d/cwg2-4ss-n7c/one-off-meeting" target="_blank" rel="noreferrer" class="rounded-xl bg-brand-900 text-white px-5 py-3 hover:bg-brand-800">Book a call</a>
           <a href="#contact" onclick="event.preventDefault();scrollToId('contact')" class="rounded-xl border border-slate-300 px-5 py-3 hover:bg-slate-100">Contact</a>
         </div>
       </div>
@@ -216,15 +218,20 @@
     </div>
   </section>
 
-  <!-- CALENDLY (official inline embed) -->
+  <!-- CALENDLY (simple iframe, isolated) -->
   <section class="bg-white">
     <div class="mx-auto max-w-7xl px-4 py-16">
       <h2 class="text-3xl md:text-4xl font-bold text-center">Book a 30-minute intro</h2>
       <p class="text-slate-600 text-center mt-2">Pick a time that works — no back-and-forth.</p>
       <div class="mt-8 rounded-3xl border border-slate-200 bg-white overflow-hidden">
-        <div class="calendly-inline-widget" data-url="https://calendly.com/josh-sharp-excelora/30min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:720px;"></div>
+        <iframe
+          title="Calendly"
+          src="https://calendly.com/d/cwg2-4ss-n7c/one-off-meeting?embed_domain=YOURDOMAIN.vercel.app&embed_type=Inline&hide_gdpr_banner=1"
+          style="width:100%; height:720px; border:0; display:block;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     </div>
   </section>
 
